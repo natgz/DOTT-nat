@@ -1,27 +1,30 @@
 pipeline {
 
     agent any
-
     stages{
 
-        stage('Git Checkout'){
+        stage('Checkout'){
             
-            steps{git branch: 'main', url: 'https://github.com/natgz/DOTT-nat.git'}
-        }
-
-        stage('Test'){
-            steps {
-                    echo 'testing the application' 
-            }
-        }
-    
-        stage('Deploy'){
-            steps {
-                    echo 'testing the application' 
+            steps{
+                checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/natgz/DOTT-nat.git']]])
             }
         }
         
     }
-
-    
+   
 }
+
+
+// Syntax
+// Execute some logic After all stages executed
+    // post {
+
+    // }
+    // // define a script that runs only when the build succeded
+    // always {
+
+    // }
+    // // defines a script that runs only when the build fails
+    // failure {
+
+    // }
