@@ -1,9 +1,7 @@
 pipeline {
 
-    agent any
     stages{
-        
-
+        agent any
 
         stage('Checkout'){
             
@@ -14,11 +12,8 @@ pipeline {
 
 
         stage('Build'){
-            
-           agent {
-                docker {
-                    image 'python:3-alpine'
-                }
+            agent {
+                docker {image 'python:3-alpine'}
             }
             steps {
                 sh 'python -m py_compile sources/api.py sources/convert.py'
