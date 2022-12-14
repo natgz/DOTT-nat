@@ -10,6 +10,12 @@ pipeline {
             }
         }
         
+        stage('Build'){
+            
+            steps{
+                sh 'python3 api.py'
+            }
+        }
     }
    
 }
