@@ -14,9 +14,9 @@ pipeline {
 
     stages{
 
-        stage('Build'){
+        stage('Test'){
             steps {
-                git branch: 'Project', url: 'https://github.com/natgz/DOTT-nat.git'
+                echo 'testing...'
             }
        
         }
