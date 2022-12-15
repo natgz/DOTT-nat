@@ -6,7 +6,7 @@ pipeline {
 
         stage('Build'){
             steps {
-                git branch: 'Project', url: 'https://github.com/natgz/DOTT-nat.git'
+                git branch: 'Project', credentialsId: 'git-credentials-dott', url: 'https://github.com/natgz/DOTT-nat.git'
             }
        
         }
