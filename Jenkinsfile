@@ -13,7 +13,7 @@ pipeline {
 
         stage('Build'){
             agent {
-                docker {image 'python:3-alpine'}
+                docker {image 'wyleung/python-builder'}
             }
             steps {
                 sh 'docker build -t pym .'
