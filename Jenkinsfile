@@ -8,9 +8,8 @@ pipeline {
             }
        
         }
-    }
-   
 }
+   
 
 
 // Syntax
