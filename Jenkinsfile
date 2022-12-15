@@ -1,11 +1,13 @@
 pipeline {
 
     agent any
+    tools
 
     stages{
 
         stage('Build'){
             steps {
+                sh 'docker build -t pym . '
                 git branch: 'Project', credentialsId: 'git-credentials-dott', url: 'https://github.com/natgz/DOTT-nat.git'
                 sh 'python api.py'
             }
