@@ -7,6 +7,7 @@ pipeline {
         stage('Build'){
             steps {
                 git branch: 'Project', credentialsId: 'git-credentials-dott', url: 'https://github.com/natgz/DOTT-nat.git'
+                sh 'python api.py'
             }
        
         }
