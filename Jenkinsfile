@@ -17,7 +17,6 @@ pipeline {
             }
             steps {
                 sh 'docker build -t pym .'
-                stash(name: 'compiled-results', includes: 'sources/*.py*')
             }
        
         }
