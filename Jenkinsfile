@@ -1,13 +1,12 @@
 pipeline {
 
     agent any
-
-        stage('Build'){
-            steps {
-                git branch: 'Project', url: 'https://github.com/natgz/DOTT-nat.git'
-            }
-       
+    stage('Build'){
+        steps {
+            git branch: 'Project', url: 'https://github.com/natgz/DOTT-nat.git'
         }
+       
+    }
 }
    
 
