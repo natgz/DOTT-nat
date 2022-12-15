@@ -11,6 +11,16 @@ pipeline {
        
         }
     }
+
+    stages{
+
+        stage('Build'){
+            steps {
+                git branch: 'Project', url: 'https://github.com/natgz/DOTT-nat.git'
+            }
+       
+        }
+    }
    
 }
    
