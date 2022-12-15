@@ -1,7 +1,7 @@
 from flask import Flask
 from flask import jsonify
 from flask import request
-from convert import convert
+from convert import *
 
 app = Flask(__name__)
 convert = CidrMaskConvert()
