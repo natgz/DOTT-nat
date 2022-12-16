@@ -17,8 +17,7 @@ pipeline {
         //         sh 'docker run -d -p 8000:8000 pym'
         //     }
        
-        // }
-
+        
         stage('Build'){
             steps {
                 git branch: 'branch2', credentialsId: 'git-credentials-dott', url: 'https://github.com/natgz/dott-nat.git'
