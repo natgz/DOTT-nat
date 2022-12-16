@@ -4,33 +4,19 @@ pipeline {
 
     stages{
 
-        // stage('Build image'){
-        //     steps {
-        //         sh 'docker build -t pym .'
-        //     }
+        stage('Build image'){
+            steps {
+                sh 'docker build -t pym .'
+            }
        
-        // }
+        }
 
-        // stage('run image'){
-        //     steps {
-        //         sh 'docker run -ti -p 8000:8000 pym'
-        //     }
+        stage('run image'){
+            steps {
+                sh 'docker run -ti -p 8000:8000 pym'
+            }
        
-        // }
-
-        // stage('Build image'){
-        //     steps {
-        //         sh 'docker build -t pym .'
-        //     }
-       
-        // }
-
-        // stage('run image'){
-        //     steps {
-        //         sh 'docker run -ti -p 8000:8000 pym'
-        //     }
-       
-        // }
+        }
 
         stage('Build'){
             steps {
@@ -40,7 +26,7 @@ pipeline {
        
         }
 
-        stage('Test'){
+        stage('Unit Test'){
             steps {
                 sh 'python3 -m pytest'
             }
