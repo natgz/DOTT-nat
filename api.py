@@ -4,7 +4,7 @@ from flask import request
 from convert import *
 
 app = Flask(__name__)
-api = restful.Api(app)
+api = Api(app)
 convert = CidrMaskConvert()
 validate = IpValidate()
 
