@@ -9,7 +9,7 @@ RUN apk add pkgconf
 RUN apk add build-base
 RUN apk add python3-dev
 
-COPY . /usr/src/app
+COPY . . 
 CMD ["ash", "-c", "python", "api.py"]
 # docker build -t pym .
 # docker run -ti -p 8000:8000 pym
