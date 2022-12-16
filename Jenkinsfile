@@ -4,6 +4,20 @@ pipeline {
 
     stages{
 
+        // stage('Build image'){
+        //     steps {
+        //         sh 'docker build -t pym .'
+        //     }
+       
+        // }
+
+        // stage('run image'){
+        //     steps {
+        //         sh 'docker run -ti -p 8000:8000 pym'
+        //     }
+       
+        // }
+
         stage('Build'){
             steps {
                 git branch: 'Project', credentialsId: 'git-credentials-dott', url: 'https://github.com/natgz/DOTT-nat.git'
@@ -14,7 +28,7 @@ pipeline {
 
         stage('Test'){
             steps {
-                echo 'testing...'
+                sh 'python3 -m pytest'
             }
        
         }
