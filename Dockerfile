@@ -5,7 +5,6 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 RUN apk add python3 
-RUN pip install alpine==0.0.2
 RUN apk add pkgconf
 RUN apk add build-base
 RUN apk add python3-dev
