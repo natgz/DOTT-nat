@@ -4,20 +4,20 @@ pipeline {
 
     stages{
 
-        stage('Build image'){
-            steps {
-                sh 'docker build -t pym .'
+        // stage('Build image'){
+        //     steps {
+        //         sh 'docker build -t pym .'
                 
-            }
+        //     }
        
-        }
+        // }
 
-        stage('run image'){
-            steps {
-                sh 'docker run -d -p 8000:8000 pym'
-            }
+        // stage('run image'){
+        //     steps {
+        //         sh 'docker run -d -p 8000:8000 pym'
+        //     }
        
-        }
+        // }
 
         stage('Build'){
             steps {
