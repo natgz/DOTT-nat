@@ -4,6 +4,7 @@ from flask import request
 from convert import *
 
 app = Flask(__name__)
+api = Api(app)
 convert = CidrMaskConvert()
 validate = IpValidate()
 
@@ -50,7 +51,7 @@ def url_ipv4_validation():
     }
     return jsonify(res)
 
-api.add_resorce(dott-nat,'/')
+api.add_resource(dott-nat,'/')
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=8000)
