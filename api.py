@@ -51,7 +51,6 @@ def url_ipv4_validation():
     }
     return jsonify(res)
 
-api.add_resource(dott-nat,'/')
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=8000)
